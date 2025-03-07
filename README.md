@@ -1,11 +1,5 @@
 # Kinase-mediated Cardiovascular Toxicitity
 
-- **Detailed Model Architecture**: Multi-task learning setup, molecular and omics encoders, SHAP/attention mechanisms for interpretability.
-- **Data Pipeline**: How to collect, preprocess, and integrate public datasets (FAERS, ChEMBL, GEO, LINCS, ToxCast) for training.
-- **Training & Inference**: Step-by-step process for training the model, loss functions, hyperparameter tuning, and inference workflow.
-- **Evaluation & Benchmarking**: Metrics, baseline comparisons, and robustness checks.
-- **Impact & Translational Relevance**: How this methodology improves AI-driven drug safety screening.
-
 # Model Architecture
 
 **Multi-Task Learning (MTL) Design:** The framework uses a *hard parameter sharing* MTL neural network that learns **cardiotoxicity, hepatotoxicity, and neurotoxicity** predictions jointly. All tasks share the early layers (capturing general toxicity features), and each task has its own output layer for organ-specific toxicity (three outputs) ([An Overview of Multi-Task Learning for Deep Learning](https://www.ruder.io/multi-task/#:~:text=Hard%20parameter%20sharing%20is%20the,specific%20output%20layers)). This design leverages shared representations to improve generalization, since related toxicity tasks provide complementary training signals ([An Overview of Multi-Task Learning for Deep Learning](https://www.ruder.io/multi-task/#:~:text=Hard%20parameter%20sharing%20is%20the,specific%20output%20layers)). In effect, the model can identify common patterns (e.g. class effects of EGFR inhibitors) while tailoring predictions to each organ.
