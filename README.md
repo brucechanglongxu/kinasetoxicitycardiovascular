@@ -1,4 +1,4 @@
-# kinasetoxicitycardiovascular
+# Kinase-mediated Cardiovascular Toxicitity
 
 - **Detailed Model Architecture**: Multi-task learning setup, molecular and omics encoders, SHAP/attention mechanisms for interpretability.
 - **Data Pipeline**: How to collect, preprocess, and integrate public datasets (FAERS, ChEMBL, GEO, LINCS, ToxCast) for training.
